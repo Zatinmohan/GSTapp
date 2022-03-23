@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gstapp/Controllers/mainPageController.dart';
 import 'package:gstapp/Misc/colors.dart';
 
 class CardDetails extends StatelessWidget {
@@ -21,7 +22,7 @@ class CardDetails extends StatelessWidget {
           ),
           const SizedBox(height: 5.0),
           Text(
-            "GST NO",
+            Get.find<MainPageController>().searchBar.text,
             style: TextStyle(
                 color: fontColor,
                 fontSize: Get.width * 0.055,
@@ -29,7 +30,7 @@ class CardDetails extends StatelessWidget {
           ),
           const SizedBox(height: 18.0),
           Text(
-            "Company Name",
+            Get.find<MainPageController>().companyName,
             style: TextStyle(
                 color: fontColor,
                 fontSize: Get.width * 0.05,
@@ -45,9 +46,11 @@ class CardDetails extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  "• Active",
+                  "• ${Get.find<MainPageController>().activeStatus()}",
                   style: TextStyle(
-                    color: Colors.green,
+                    color: Get.find<MainPageController>().checkActiveContianer
+                        ? Colors.green
+                        : Colors.red,
                     fontWeight: FontWeight.w600,
                     fontSize: Get.width * 0.045,
                   ),

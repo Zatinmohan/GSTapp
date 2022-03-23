@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gstapp/Controllers/mainPageController.dart';
 import 'package:gstapp/Misc/colors.dart';
 
 class WardMain extends StatelessWidget {
@@ -9,12 +10,21 @@ class WardMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: const [
+      children: [
         CustomContianerWidget(
-            title: "State Juristication", subtitle: "Ward 74"),
+            title: "State Juristication",
+            subtitle: Get.find<MainPageController>()
+                .juristication
+                .stateJuristication),
         CustomContianerWidget(
-            title: "Center Juristication", subtitle: "Range-139"),
-        CustomContianerWidget(title: "Taxpayer Type", subtitle: "Regular"),
+            title: "Center Juristication",
+            subtitle: Get.find<MainPageController>()
+                .juristication
+                .centerJuristication),
+        CustomContianerWidget(
+            title: "Taxpayer Type",
+            subtitle:
+                Get.find<MainPageController>().juristication.typeOfTaxPayer),
       ],
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gstapp/Controllers/mainPageController.dart';
 import 'package:gstapp/Misc/colors.dart';
 
 class ConsitutionBussiness extends StatelessWidget {
@@ -28,7 +29,7 @@ class ConsitutionBussiness extends StatelessWidget {
           ),
           const SizedBox(height: 10.0),
           Text(
-            "Private Limited Company",
+            Get.find<MainPageController>().companyCertificate,
             style: TextStyle(
               fontSize: Get.width * 0.06,
               fontWeight: FontWeight.w700,

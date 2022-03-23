@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gstapp/Controllers/mainPageController.dart';
 
 class ResultDateWidget extends StatelessWidget {
   const ResultDateWidget({Key? key}) : super(key: key);
@@ -18,15 +19,15 @@ class ResultDateWidget extends StatelessWidget {
         ),
         child: Column(
           children: [
-            dateTitleWidget(
+            const dateTitleWidget(
               title1: "Date of Registration",
               title2: "Date of Cancellation",
               isDate: false,
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             dateTitleWidget(
-              title1: "01/07/207",
-              title2: "--",
+              title1: Get.find<MainPageController>().registrationDate,
+              title2: Get.find<MainPageController>().expireDate,
               isDate: true,
             ),
           ],

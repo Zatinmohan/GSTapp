@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gstapp/Controllers/mainPageController.dart';
 import 'package:gstapp/Misc/colors.dart';
 
 class AddressData extends StatelessWidget {
@@ -7,12 +8,6 @@ class AddressData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const String floor = "K-37";
-    const String type = "Floor";
-    const String building = "Mandoli Industrial Area";
-    const String address = "North East Delhi";
-    const String state = "State";
-    const String pincode = "110093";
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -46,7 +41,7 @@ class AddressData extends StatelessWidget {
                 ),
                 const SizedBox(height: 10.0),
                 Text(
-                  "$floor, $type, $building,",
+                  "${Get.find<MainPageController>().primaryAddress.floorRoom}, ${Get.find<MainPageController>().primaryAddress.type}, ${Get.find<MainPageController>().primaryAddress.companyBuilding},",
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w600,
@@ -57,7 +52,7 @@ class AddressData extends StatelessWidget {
                 ),
                 const SizedBox(height: 5.0),
                 Text(
-                  address,
+                  Get.find<MainPageController>().primaryAddress.companyArea,
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w600,
@@ -68,7 +63,7 @@ class AddressData extends StatelessWidget {
                 ),
                 const SizedBox(height: 5.0),
                 Text(
-                  "$state, $pincode",
+                  "${Get.find<MainPageController>().primaryAddress.state}, ${Get.find<MainPageController>().primaryAddress.pincode}",
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w600,

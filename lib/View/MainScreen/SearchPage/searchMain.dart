@@ -27,6 +27,7 @@ class SearchMain extends StatelessWidget {
           ),
           const SizedBox(height: 5.0),
           TextField(
+            controller: Get.find<MainPageController>().searchBar,
             decoration: InputDecoration(
               border: outlineInputBorder,
               focusedBorder: outlineInputBorder,
@@ -47,7 +48,9 @@ class SearchMain extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   primary: mainThemeColor,
                 ),
-                onPressed: (() => Get.toNamed('/Result')),
+                onPressed: () {
+                  Get.find<MainPageController>().fetchData();
+                },
                 child: Text("Search")),
           ),
         ],

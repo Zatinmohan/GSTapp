@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gstapp/Misc/colors.dart';
 import 'package:gstapp/View/ResultPage/UpperContainer/cardData.dart';
-import 'package:gstapp/View/ResultPage/WardRows/WardMain.dart';
 
 class UpperResultContainer extends StatelessWidget {
   const UpperResultContainer({Key? key}) : super(key: key);
@@ -21,11 +20,11 @@ class UpperResultContainer extends StatelessWidget {
           )),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const CustomAppBar(),
-          const SizedBox(height: 30.0),
+        children: const [
+          CustomAppBar(),
+          SizedBox(height: 30.0),
           CardDetails(),
-          const SizedBox(height: 10.0),
+          SizedBox(height: 10.0),
         ],
       ),
     );
