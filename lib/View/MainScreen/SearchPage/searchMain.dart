@@ -43,7 +43,7 @@ class SearchMain extends StatelessWidget {
           const SizedBox(height: 20.0),
           SizedBox(
             width: Get.width * 0.9,
-            height: Get.height * 0.075,
+            height: Get.height * 0.07,
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   primary: mainThemeColor,

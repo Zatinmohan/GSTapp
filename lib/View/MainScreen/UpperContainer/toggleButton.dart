@@ -14,7 +14,7 @@ class ToggleButtonCustom extends StatelessWidget {
         Center(
             child: Container(
           width: Get.width * 0.8,
-          height: Get.height * 0.085,
+          height: Get.height * 0.06,
           decoration: BoxDecoration(
             color: const Color(0xff1a884b),
             borderRadius: BorderRadius.circular(30.0),

@@ -11,7 +11,7 @@ class UpperResultContainer extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
       width: Get.width,
-      height: Get.height * 0.4,
+      height: Get.height * 0.39,
       decoration: const BoxDecoration(
           color: mainThemeColor,
           borderRadius: BorderRadius.only(
