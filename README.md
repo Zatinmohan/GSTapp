@@ -1,5 +1,7 @@
 # gstapp
 
+Use 55A12CXYZ to fetch the details. I have only added one data to the database. 
+
 A new Flutter project.
 
 ## Getting Started
